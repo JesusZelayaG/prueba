@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "04c978ac-f66d-4a03-b121-4ac5983271cb",
+		"name": "ApiWeb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"miriam.caceres@gmail.com\",\r\n    \"password\":\"sg456844\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44310/api/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44310",
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Usuario Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1pcmlhbSIsImVtYWlsIjoibWlyaWFtLmNhY2VyZXNAZ21haWwuY29tIiwianRpIjoiNjA1YzE3NGQtMzZkOS00NWI3LTg3ODgtZjBmZjBiM2E4ZmY5IiwiZXhwIjoxNjI3MDI0MTU2LCJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIn0.j0F9ELQ3TfpuJsdCEN3Mf_8qZTrjeyWs1X_NSBNS40g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FirstName\":\"Daniel\", \r\n    \"SecondName\":\"Eduardo\", \r\n    \"LastName\":\"Gomez\", \r\n    \"SecondLastName\":\"Polanco\", \r\n    \"Email\":\"daniel.gomez@gmail.com\", \r\n    \"Password\":\"123456\", \r\n    \"UserType\":\"Administrador\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Users",
+					"protocol": "https",
+					"host": [
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de Usuarios Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1pcmlhbSIsImVtYWlsIjoibWlyaWFtLmNhY2VyZXNAZ21haWwuY29tIiwianRpIjoiNjA1YzE3NGQtMzZkOS00NWI3LTg3ODgtZjBmZjBiM2E4ZmY5IiwiZXhwIjoxNjI3MDI0MTU2LCJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIn0.j0F9ELQ3TfpuJsdCEN3Mf_8qZTrjeyWs1X_NSBNS40g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Users",
+					"protocol": "https",
+					"host": [
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Usuario Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1pcmlhbSIsImVtYWlsIjoibWlyaWFtLmNhY2VyZXNAZ21haWwuY29tIiwianRpIjoiNjA1YzE3NGQtMzZkOS00NWI3LTg3ODgtZjBmZjBiM2E4ZmY5IiwiZXhwIjoxNjI3MDI0MTU2LCJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIn0.j0F9ELQ3TfpuJsdCEN3Mf_8qZTrjeyWs1X_NSBNS40g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdUser\":2,\r\n    \"FirstName\":\"Daniel\", \r\n    \"SecondName\":\"Eduardo\", \r\n    \"LastName\":\"Gomez\", \r\n    \"SecondLastName\":\"Polanco\", \r\n    \"Email\":\"daniel.gomez@gmail.com\", \r\n    \"Password\":\"123456\", \r\n    \"UserType\":\"Administrador\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Users",
+					"protocol": "https",
+					"host": [
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Usuarios Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1pcmlhbSIsImVtYWlsIjoibWlyaWFtLmNhY2VyZXNAZ21haWwuY29tIiwianRpIjoiNjA1YzE3NGQtMzZkOS00NWI3LTg3ODgtZjBmZjBiM2E4ZmY5IiwiZXhwIjoxNjI3MDI0MTU2LCJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIn0.j0F9ELQ3TfpuJsdCEN3Mf_8qZTrjeyWs1X_NSBNS40g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Users/5",
+					"protocol": "https",
+					"host": [
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de Productos Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1pcmlhbSIsImVtYWlsIjoibWlyaWFtLmNhY2VyZXNAZ21haWwuY29tIiwianRpIjoiNjA1YzE3NGQtMzZkOS00NWI3LTg3ODgtZjBmZjBiM2E4ZmY5IiwiZXhwIjoxNjI3MDI0MTU2LCJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIn0.j0F9ELQ3TfpuJsdCEN3Mf_8qZTrjeyWs1X_NSBNS40g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Product",
+					"protocol": "https",
+					"host": [
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1pcmlhbSIsImVtYWlsIjoibWlyaWFtLmNhY2VyZXNAZ21haWwuY29tIiwianRpIjoiNjA1YzE3NGQtMzZkOS00NWI3LTg3ODgtZjBmZjBiM2E4ZmY5IiwiZXhwIjoxNjI3MDI0MTU2LCJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIn0.j0F9ELQ3TfpuJsdCEN3Mf_8qZTrjeyWs1X_NSBNS40g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdProduct\":\"cel0956\",\r\n    \"ProductName\":\"Samsung S6\",\r\n    \"ProductDesc\":\"Telefono mobile inteligente\",\r\n    \"ProductPrice\":2.3,\r\n    \"ProductCategory\":\"Tecnologia\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Product/",
+					"protocol": "https",
+					"host": [
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar producto Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1pcmlhbSIsImVtYWlsIjoibWlyaWFtLmNhY2VyZXNAZ21haWwuY29tIiwianRpIjoiNjA1YzE3NGQtMzZkOS00NWI3LTg3ODgtZjBmZjBiM2E4ZmY5IiwiZXhwIjoxNjI3MDI0MTU2LCJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIn0.j0F9ELQ3TfpuJsdCEN3Mf_8qZTrjeyWs1X_NSBNS40g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdProduct\":\"cel0956\",\r\n    \"ProductName\":\"Nokia S6\",\r\n    \"ProductDesc\":\"Telefono mobile inteligente\",\r\n    \"ProductPrice\":2.3,\r\n    \"ProductCategory\":\"Tecnologia\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Product",
+					"protocol": "https",
+					"host": [
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1pcmlhbSIsImVtYWlsIjoibWlyaWFtLmNhY2VyZXNAZ21haWwuY29tIiwianRpIjoiNjA1YzE3NGQtMzZkOS00NWI3LTg3ODgtZjBmZjBiM2E4ZmY5IiwiZXhwIjoxNjI3MDI0MTU2LCJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIn0.j0F9ELQ3TfpuJsdCEN3Mf_8qZTrjeyWs1X_NSBNS40g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Product/cel0956",
+					"protocol": "https",
+					"host": [
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Product",
+						"cel0956"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik1pcmlhbSIsImVtYWlsIjoibWlyaWFtLmNhY2VyZXNAZ21haWwuY29tIiwianRpIjoiNjA1YzE3NGQtMzZkOS00NWI3LTg3ODgtZjBmZjBiM2E4ZmY5IiwiZXhwIjoxNjI3MDI0MTU2LCJpc3MiOiJ5b3VyZG9tYWluLmNvbSIsImF1ZCI6InlvdXJkb21haW4uY29tIn0.j0F9ELQ3TfpuJsdCEN3Mf_8qZTrjeyWs1X_NSBNS40g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Product/cel0956",
+					"protocol": "https",
+					"host": [
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Product",
+						"cel0956"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
