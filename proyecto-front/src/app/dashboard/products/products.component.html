@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8 col-12">
+      <div class="card">
+        <h5 class="card-title text-center">Formulario Productos</h5>
+      <div class="card-body">
+        <form
+          [formGroup]="form"
+          (ngSubmit)="submit()"
+          id="login-form"
+          action=""
+          method="post"
+        >
+          <div class="form-group">
+            <label for="IdProduct">Id Producto:</label>
+            <input 
+              formControlName="IdProduct"
+              type="text"
+              name="IdProduct"
+              id="IdProduct"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="ProductName">Nombre Productos:</label>
+            <input 
+              formControlName="ProductName"
+              type="text"
+              name="ProductName"
+              id="ProductName"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="ProductDesc">Descripcion Producto:</label>
+            <input 
+              formControlName="ProductDesc"
+              type="text"
+              name="ProductDesc"
+              id="ProductDesc"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="ProductPrice">Precio:</label>
+            <input 
+              formControlName="ProductPrice"
+              type="text"
+              name="ProductPrice"
+              id="ProductPrice"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="ProductCategory">Categoria:</label>
+            <input 
+              formControlName="ProductCategory"
+              type="text"
+              name="ProductCategory"
+              id="ProductCategory"
+              class="form-control"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button class="btn btn-primary float-right" (click)="update()">Actualizar</button>
+        </form>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-12">
+      <div class="card">
+        <h5 class="card-title text-center">Productos</h5>
+        <div class="card-body .horizontal-scrollable">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">IdProduct</th>
+              <th scope="col">Nombre Producto</th>
+              <th scope="col">Descripcion del producto</th>
+              <th scope="col">Precio del producto</th>
+              <th scope="col">Categoria Producto</th>
+              <th scope="col">Accion</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let product of list ; index as i">
+                <td>{{product.id_product}}</td>
+                <td>{{product.product_name}}</td>
+                <td>{{product.product_desc}}</td>
+                <td>{{product.product_price}}</td>
+                <td>{{product.category}}</td>
+                <td><button (click)="delete(product.id_product)">delete</button></td>
+                <td><button (click)="openForEdit(product)">Modificar</button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

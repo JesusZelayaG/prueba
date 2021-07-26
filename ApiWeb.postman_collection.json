@@ -20,12 +20,13 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:44310/api/Login",
+					"raw": "https://webapiproyecto20210723073816.azurewebsites.net/api/Login",
 					"protocol": "https",
 					"host": [
-						"localhost"
+						"webapiproyecto20210723073816",
+						"azurewebsites",
+						"net"
 					],
-					"port": "44310",
 					"path": [
 						"api",
 						"Login"

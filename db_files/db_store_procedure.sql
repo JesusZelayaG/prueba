@@ -3,6 +3,7 @@ DROP procedure IF EXISTS `insert_user`;
 DROP procedure IF EXISTS `update_user`;
 DROP procedure IF EXISTS `delete_user`;
 DROP procedure IF EXISTS `select_user`;
+DROP procedure IF EXISTS `login`;
 
 /*Store Procedure user table*/
 
@@ -155,6 +156,16 @@ CREATE PROCEDURE `select_product` (
 )
 BEGIN
 	SELECT * FROM products WHERE id_product = i_product;
+END$$
+DELIMITER ;
+DELIMITER $$
+USE `inventory`$$
+CREATE PROCEDURE `login` (
+	in u_email varchar(45),
+    in u_pass varchar(30)
+)
+BEGIN
+	SELECT * FROM users WHERE user_email = u_email and user_password = u_pass;
 END$$
 DELIMITER ;
 

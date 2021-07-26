@@ -1,0 +1,132 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8 col-12">
+      <div class="card">
+        <h5 class="card-title text-center">Formulario Usuarios</h5>
+      <div class="card-body">
+        <form
+          [formGroup]="form"
+          id="login-form"
+          action=""
+          method="post"
+        >
+
+          <div class="form-group">
+            <label for="FirstName">Primer Nombre:</label>
+            <input 
+              formControlName="FirstName"
+              type="text"
+              name="FirstName"
+              id="FirstName"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="SecondName">Segundo Nombre:</label>
+            <input 
+              formControlName="SecondName"
+              type="text"
+              name="SecondName"
+              id="SecondName"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="LastName">Primer Apellido:</label>
+            <input 
+              formControlName="LastName"
+              type="text"
+              name="LastName"
+              id="LastName"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="SecondLastName">Segundo Apellido:</label>
+            <input 
+              formControlName="SecondLastName"
+              type="text"
+              name="SecondLastName"
+              id="SecondLastName"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="Email">Email:</label>
+            <input 
+              formControlName="Email"
+              type="text"
+              name="Email"
+              id="Email"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="Password">Password:</label>
+            <input 
+              formControlName="Password"
+              type="password"
+              name="Password"
+              id="Password"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="UserType">Tipo de Usuario:</label>
+            <input 
+              formControlName="UserType"
+              type="text"
+              name="UserType"
+              id="UserType"
+              class="form-control"
+            />
+          </div>
+          <button class="btn btn-primary float-left" (click)="submit()">Agregar</button>
+          <button class="btn btn-primary float-right"(click)="update()">Actualizar</button>
+        </form>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-12 col-md-12">
+      <div class="card">
+        <h5 class="card-title text-center">Usuarios</h5>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">IdUser</th>
+              <th scope="col">Primer Nombre</th>
+              <th scope="col">Segundo Nombre</th>
+              <th scope="col">Primer Apellido</th>
+              <th scope="col">Segundo Apellido</th>
+              <th scope="col">Email</th>
+              <th scope="col">Tipo Usuario</th>
+              <th scope="col">Accion</th>
+              <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of list ; index as i">
+                <td>{{user.id_user}}</td>
+                <td>{{user.first_name}}</td>
+                <td>{{user.second_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.second_last_name}}</td>
+                <td>{{user.user_email}}</td>
+                <td>{{user.user_type}}</td>
+                <td><button (click)="delete(user.id_user)">delete</button></td>
+                <td><button (click)="sendForUpdate(user)">Modificar</button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
