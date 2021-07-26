@@ -7,6 +7,7 @@ export const environment = {
   url:'https://webapiproyecto20210723073816.azurewebsites.net/api'
 };
 
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
